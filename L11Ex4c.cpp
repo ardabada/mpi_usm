@@ -42,14 +42,6 @@ int main(int argc, char* argv[])
 			displacements[i] = (m_size+1)*i + (INCLUDE_DIAGONAL ? 0 : 1);
 		}
 
-		printf("\nlengths: ");
-		for (int i = 0; i < m_size; i++)
-			printf("%3d", lengths[i]);
-		printf("\ndisplacements: ");
-		for (int i = 0; i < m_size; i++)
-			printf("%3d", displacements[i]);
-		printf("\n");
-
 		MPI_Datatype upper_triangle_type;
 		MPI_Type_indexed(m_size, lengths, displacements, MPI_INT, &upper_triangle_type);
 		MPI_Type_commit(&upper_triangle_type);
