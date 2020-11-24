@@ -73,7 +73,7 @@ int main(int argc, char **argv) {
 		printf("== MATRIX ==\n");
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++)
-				printf("%5d", matrix[i * rows + j]);
+				printf("%5d", matrix[i * cols + j]);
 			printf("\n");
 		}
 
