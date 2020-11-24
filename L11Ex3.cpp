@@ -5,7 +5,7 @@
 void printMatrix(int *matrix, int rows, int cols) {
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
-			printf("%3d", matrix[i * rows + j]);
+			printf("%3d", matrix[i * cols + j]);
 		}
 		printf("\n");
 	}
